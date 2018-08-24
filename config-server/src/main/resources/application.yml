@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: E:/springcloud/config-repo #配置文件在本地获取路径
+        git:
+          uri: https://github.com/JackLijm/springcloud
+          search-paths: config-repo
+          username: 1027400380@qq.comm
+          password: ljm159118
+  profiles:
+    active: native #指定config文件在本地下获取
+
+server:
+  port: 7001
+security:
+  user:
+    name: user
+    password: 24b1e037-32e3-4b2b-aaee-ee0147d18c05
