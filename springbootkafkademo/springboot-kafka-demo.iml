@@ -30,9 +30,8 @@
     <orderEntry type="library" name="Maven: org.apache.kafka:kafka-clients:1.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.lz4:lz4-java:1.4" level="project" />
     <orderEntry type="library" name="Maven: org.xerial.snappy:snappy-java:1.1.4" level="project" />
-    <orderEntry type="library" name="Maven: org.testng:testng:6.14.3" level="project" />
+    <orderEntry type="library" name="Maven: org.testng:testng:7.0.0-beta1" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.72" level="project" />
-    <orderEntry type="library" name="Maven: org.apache-extras.beanshell:bsh:2.0b6" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.5" level="project" />
   </component>
 </module>

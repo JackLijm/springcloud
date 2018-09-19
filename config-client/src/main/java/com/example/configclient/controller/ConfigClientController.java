@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 //动态刷新配置
 @RefreshScope
 @RestController
-public class ConfigClientController {
+public  class ConfigClientController {
 
     //直接使用value绑定注入
     @Value("${from}")
-    private String from;
+    private  String from;
 
     //使用environment获取值
     @Autowired
-    private Environment env;
+    private  Environment env;
 
     @RequestMapping("/from")
     public String propValue(){
@@ -28,6 +28,6 @@ public class ConfigClientController {
 
     @RequestMapping("/from2")
     public String propValue2(){
-        return env.getProperty("from","undefined");
+        return this.env.getProperty("from","undefined");
     }
 }

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-//erueaka服务客户Dunn
+//erueaka服务客户端
 @EnableDiscoveryClient
 public class EurekaClientApplication {
 

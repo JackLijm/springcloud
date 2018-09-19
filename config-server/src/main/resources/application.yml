@@ -10,13 +10,35 @@ spring:
           uri: https://github.com/JackLijm/springcloud
           search-paths: config-repo
           username: 1027400380@qq.comm
-          password: ljm159118
+          password: lijm159118
   profiles:
     active: native #指定config文件在本地下获取
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 
 server:
   port: 7001
 security:
   user:
     name: user
-    password: 24b1e037-32e3-4b2b-aaee-ee0147d18c05
+    password: 123456
+
+#指定密钥,算法是对称加密
+encrypt:
+  key: didispace123
+#  非对称加密也可以用下面这些配置， 这些配置可以配再环境变量中
+#  key-store:
+#    location:
+#    alias:
+#    password:
+#
+
+#配置服务注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/

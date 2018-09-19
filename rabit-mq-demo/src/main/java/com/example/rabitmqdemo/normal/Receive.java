@@ -10,7 +10,9 @@ import com.rabbitmq.client.Envelope;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
-
+/*
+  普通java方式接收rabbitmq放消息的消费者
+ */
 public class Receive {
     private final static String QUEUE_NAME = "hello";
     public static void main(String[] args) throws IOException, TimeoutException {

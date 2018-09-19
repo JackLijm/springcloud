@@ -11,6 +11,9 @@ import com.rabbitmq.client.Envelope;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
+/*
+  普通java方式往rabbitmq放消息的生产着
+ */
 public class Send {
   private final static String QUEUE_NAME = "hello";
 
