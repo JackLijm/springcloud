@@ -1,6 +1,5 @@
 package com.lijm.eurekaclient.controller;
 
-
 import com.lijm.eurekaclient.bean.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -14,18 +13,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import org.apache.log4j.Logger;
+
 
 @RestController
 public class HelloWorldController {
+    private final Logger logger = Logger.getLogger(getClass());
 
     @Autowired
     private DiscoveryClient discoveryClient;
     @RequestMapping(name = "/hello",method = RequestMethod.GET)
     public String sayHello(HttpServletRequest request){
-        System.out.printf("===<call trace-2,TraceId={%s},SpanId={%s}>===",request.getHeader("X-B3-TraceId"),request.getHeader("X-B3-SpanId"));
+        logger.info("===<call trace-2,TraceId={"+request.getHeader("X-B3-TraceId")+"},SpanId={"+request.getHeader("X-B3-SpanId")+"}>===");
         List<ServiceInstance> instances =  discoveryClient.getInstances("hello-service");
         for(ServiceInstance instance:instances) {
-            System.out.println("/hello, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", port:" + instance.getPort());
+            logger.info("hello-service服务列表, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", port:" + instance.getPort());
         }
         return "hello world";
     }
