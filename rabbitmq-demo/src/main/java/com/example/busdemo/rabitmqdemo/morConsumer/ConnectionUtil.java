@@ -2,7 +2,7 @@
  * <p>文件名称: ConnectionUtil.java</p>
  * <p>文件描述: </p>
  * <p>版权所有: 版权所有(C)2016-</p>
- * <p>公    司: 金证财富南京科技有限公司</p>
+
  * <p>内容摘要: </p>
  * <p>其他说明: </p>
  * <p>创建日期： 2019/7/1 14:59 </p>
@@ -33,8 +33,8 @@ public class ConnectionUtil {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("127.0.0.1");
         factory.setPort(5672);
-        factory.setUsername("guest");
-        factory.setPassword("guest");
+        factory.setUsername("admin");
+        factory.setPassword("123456");
         Connection connection = factory.newConnection();
         return connection;
     }

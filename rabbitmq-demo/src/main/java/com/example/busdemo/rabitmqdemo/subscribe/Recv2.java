@@ -2,7 +2,7 @@
  * <p>文件名称: Recv.java</p>
  * <p>文件描述: </p>
  * <p>版权所有: 版权所有(C)2016-</p>
- * <p>公    司: 金证财富南京科技有限公司</p>
+
  * <p>内容摘要: </p>
  * <p>其他说明: </p>
  * <p>创建日期： 2019/7/1 15:29 </p>
@@ -23,7 +23,6 @@
 package com.example.busdemo.rabitmqdemo.subscribe;
 
 import com.example.busdemo.rabitmqdemo.morConsumer.ConnectionUtil;
-import com.example.rabitmqdemo.morConsumer.ConnectionUtil;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.QueueingConsumer;

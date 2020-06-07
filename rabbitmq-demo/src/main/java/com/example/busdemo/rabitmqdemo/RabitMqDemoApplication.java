@@ -15,7 +15,7 @@ public class RabitMqDemoApplication{
 		return new ArrayList<T>();
 	}
 
-	public static  <K,V> Map<K,V> aa(){
+	public static  <K,V>  Map<K,V> aa(){
 		return new HashMap<K,V>();
 	}
 	public static List<?> a(List<?> aa){
