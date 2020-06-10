@@ -1,0 +1,15 @@
+server:
+  port: 8001
+spring:
+  cloud:
+    consul:
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        hostname: 127.0.0.1
+  application:
+    name: consul-client1
+management:
+  endpoint:
+    health:
+      show-details: always
